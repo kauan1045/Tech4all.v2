@@ -1,0 +1,301 @@
+/* Estilos Globais */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Define a fonte do corpo do texto */
+    background-color: white; /* Define a cor de fundo como branco */
+    margin: 0; /* Remove as margens padrão do corpo */
+    padding-top: 60px; /* Adiciona um preenchimento superior para evitar que o conteúdo seja coberto pela navbar fixa */
+}
+
+body::hover{
+    background-color: rgb(0, 255, 98); /* Cor de fundo ao passar o mouse sobre o corpo */
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades durante 0.3 segundos com efeito ease-in-out */
+}
+
+/* Barra de Navegação Fixa */
+.fixed-nav {
+    background-color: #c2f0c2; /* Define a cor de fundo da navbar como verde claro */
+    position: fixed; /* Fixa a navbar no topo da janela do navegador */
+    top: 0; /* Garante que a navbar fique no topo */
+    left: 0; /* Garante que a navbar comece na borda esquerda */
+    width: 100%; /* Faz a navbar ocupar toda a largura da janela */
+    z-index: 100; /* Garante que a navbar fique acima de outros elementos na página */
+}
+
+.nav-container {
+    display: flex; /* Usa o modelo de layout Flexbox para organizar os itens internos */
+    justify-content: center; /* Centraliza os itens horizontalmente dentro do container da navbar */
+    align-items: center; /* Centraliza os itens verticalmente dentro do container da navbar */
+    padding: 22px 0; /* Adiciona um preenchimento superior e inferior de 22 pixels */
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores de lista padrão */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    margin: 0; /* Remove as margens padrão da lista */
+    text-align: center; /* Centraliza o texto dentro da lista */
+}
+
+nav ul li {
+    display: inline; /* Faz os itens da lista ficarem em linha horizontalmente */
+    margin: 0 15px; /* Adiciona uma margem de 15 pixels nas laterais de cada item da lista */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: white; /* Define a cor do texto dos links da navbar como branco */
+}
+
+/* Cabeçalho com Vídeo de Fundo */
+header {
+    position: relative; /* Define o cabeçalho como um container de posicionamento para elementos absolutos dentro dele */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da página */
+    height: auto; /* Permite que a altura do cabeçalho se ajuste ao conteúdo */
+    overflow: hidden; /* Esconde qualquer conteúdo que exceda as bordas do cabeçalho */
+    display: flex; /* Usa Flexbox para alinhar os itens internos */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+
+.header-content {
+    padding-top: 100px; /* Adiciona um preenchimento superior de 100 pixels */
+    padding-bottom: 400px; /* Adiciona um preenchimento inferior de 400 pixels */
+    position: relative; /* Define como relativo para posicionar elementos absolutos dentro dele */
+    width: 100%; /* Ocupa toda a largura do cabeçalho */
+    height: 100%; /* Ocupa toda a altura do cabeçalho */
+    display: flex; /* Usa Flexbox para alinhar os itens internos */
+    flex-direction: column; /* Organiza os itens internos em coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Centraliza o texto dentro do container */
+    color: rgb(0, 255, 98); /* Define a cor do texto dentro do cabeçalho como verde */
+}
+
+.background-video {
+    position: absolute; /* Posiciona o vídeo de forma absoluta dentro do seu container (header) */
+    top: 0%; /* Alinha o topo do vídeo com o topo do container */
+    left: 0%; /* Alinha a esquerda do vídeo com a esquerda do container */
+    width: 100%; /* Faz o vídeo ocupar toda a largura do container */
+    height: 100%; /* Faz o vídeo ocupar toda a altura do container */
+    object-fit: cover; /* Preenche o container do vídeo mantendo a proporção e cortando se necessário */
+    z-index: -1; /* Coloca o vídeo atrás de outros elementos dentro do cabeçalho */
+}
+
+.header-text {
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20 pixels abaixo do texto do cabeçalho */
+}
+
+.titulo {
+    color: white; /* Azul para o título */
+    font-size: 48px; /* Ajuste o tamanho conforme necessário */
+    margin-top: 0;
+    font-family: fantasy;
+    letter-spacing: 5px;
+    padding-top: 100px;
+    margin-bottom: 5px;
+}
+
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blue; /* Cor do subtítulo */
+    font-size: 24px; /* Ajuste o tamanho conforme necessário */
+}
+
+.subtitulo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #c2f0c2; /* Cor do subtítulo */
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.buttons-on-video {
+    padding: 200px;
+    margin: 50px;
+    position: absolute; /* Posiciona os botões de forma absoluta dentro do seu container (header) */
+    bottom: 20px; /* Alinha a parte inferior dos botões a 20 pixels da parte inferior do container */
+    right: 0px;
+    left: 60%; /* Alinha a parte direita dos botões a 20 pixels da parte direita do container */
+    display: flex; /* Usa Flexbox para organizar os botões em linha */
+    gap: 10px; /* Adiciona um espaçamento de 10 pixels entre os botões */
+    z-index: 1; /* Garante que os botões fiquem sobre o vídeo */
+}
+
+.buttons-on-video button {
+    background-color: #0000ff; /* Azul para os botões */
+    color: #fff; /* Branco para o texto dos botões */
+    padding: 10px 20px; /* Adiciona um preenchimento interno de 10 pixels em cima/embaixo e 20 pixels nas laterais */
+    border: none; /* Remove a borda padrão dos botões */
+    border-radius: 5px; /* Adiciona bordas arredondadas de 5 pixels */
+    cursor: pointer; /* Altera o cursor para indicar que o elemento é clicável */
+    background-image: url('img/background_button.jpg'); /* Substitua pelo caminho da sua imagem de fundo para os botões */
+    background-size: cover; /* Garante que a imagem de fundo cubra todo o botão */
+    background-position: center; /* Centraliza a imagem de fundo */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Adiciona transições suaves para opacidade e transformação */
+}
+
+.buttons-on-video button:hover {
+    opacity: 0.8; /* Diminui a opacidade do botão ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente a escala do botão ao passar o mouse */
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 20px; /* Adiciona um preenchimento de 20 pixels em todas as direções ao conteúdo principal */
+}
+
+/* Seção de Gerentes e Setores */
+.gerentes-setores {
+    margin-top: 20px; /* Adiciona uma margem superior de 20 pixels */
+    text-align: center; /* Centraliza o texto dentro desta seção */
+}
+
+.cards-container {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    display: flex; /* Usa Flexbox para organizar os cards em linha */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 20px; /* Adiciona um espaçamento de 20 pixels entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha em telas menores */
+    margin-top: 20px; /* Adiciona uma margem superior de 20 pixels */
+}
+
+.card {
+    background-color: #f0f0f0; /* Cor de fundo dos cards */
+    padding: 15px; /* Adiciona um preenchimento interno de 15 pixels */
+    border-radius: 8px; /* Adiciona bordas arredondadas de 8 pixels */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    text-align: center; /* Centraliza o texto dentro do card */
+    width: 200px; /* Define uma largura fixa para os cards */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para a transformação */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Move o card ligeiramente para cima ao passar o mouse */
+}
+
+.lider-foto img {
+    width: 100px; /* Define a largura da imagem do líder */
+    height: 100px; /* Define a altura da imagem do líder */
+    border-radius: 50%; /* Faz a imagem ficar circular */
+    object-fit: cover; /* Preenche o container da imagem mantendo a proporção e cortando se necessário */
+    margin-bottom: 10px; /* Adiciona uma margem inferior de 10 pixels abaixo da imagem */
+}
+
+/* Seção Quem Somos */
+.quem-somos {
+    margin-top: 40px; /* Adiciona uma margem superior de 40 pixels */
+}
+
+.quem-somos-content {
+    display: flex; /* Usa Flexbox para organizar a imagem e o texto em linha */
+    align-items: center; /* Alinha verticalmente a imagem e o texto ao centro */
+    gap: 20px; /* Adiciona um espaçamento de 20 pixels entre a imagem e o texto */
+}
+
+.quem-somos-content img {
+    max-width: 300px; /* Define uma largura máxima para a imagem */
+    height: auto; /* Permite que a altura da imagem se ajuste proporcionalmente */
+}
+
+.quem-somos-content p {
+    flex: 1; /* Faz o parágrafo ocupar o espaço restante */
+    text-align: right; /* Alinha o texto à direita */
+}
+
+/* Seção Nossa Equipe */
+.nossa-equipe {
+    margin-top: 40px; /* Adiciona uma margem superior de 40 pixels */
+    text-align: center; /* Centraliza o texto dentro desta seção */
+}
+
+.fotos-container {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    display: flex; /* Usa Flexbox para organizar as fotos em linha */
+    justify-content: center; /* Centraliza as fotos horizontalmente */
+    gap: 20px; /* Adiciona um espaçamento de 20 pixels entre as fotos */
+    flex-wrap: wrap; /* Permite que as fotos quebrem para a próxima linha em telas menores */
+    margin-top: 20px; /* Adiciona uma margem superior de 20 pixels */
+}
+
+.foto-equipe img {
+    width: 100px; /* Define a largura da foto da equipe */
+    height: 100px; /* Define a altura da foto da equipe */
+    border-radius: 50%; /* Faz a imagem ficar circular */
+    object-fit: cover; /* Preenche o container da imagem mantendo a proporção e cortando se necessário */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para a transformação */
+}
+
+.foto-equipe img:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente a escala da foto ao passar o mouse */
+}
+
+/* Seção Serviços */
+.servicos {
+    margin-top: 40px; /* Adiciona uma margem superior de 40 pixels */
+    text-align: center; /* Centraliza o texto dentro desta seção */
+}
+
+.servicos img {
+    max-width: 500px; /* Define uma largura máxima para a imagem de serviços */
+    height: auto; /* Permite que a altura da imagem se ajuste proporcionalmente */
+    margin-top: 10px; /* Adiciona uma margem superior de 10 pixels abaixo do texto */
+}
+
+/* Seção Redes Sociais */
+.redes-sociais {
+    margin-top: 40px; /* Adiciona uma margem superior de 40 pixels */
+    text-align: center; /* Centraliza o texto dentro desta seção */
+}
+
+.social-icons a {
+    display: inline-block; /* Faz os links das redes sociais ficarem em linha, mas permitindo definir largura e altura */
+    margin: 0 10px; /* Adiciona uma margem horizontal de 10 pixels entre os ícones */
+}
+
+.social-icons img {
+    width: 30px; /* Define a largura dos ícones de redes sociais */
+    height: 30px; /* Define a altura dos ícones de redes sociais */
+}
+
+/* Rodapé */
+footer {
+    text-align: center; /* Centraliza o texto dentro do rodapé */
+    padding: 20px 0; /* Adiciona um preenchimento superior e inferior de 20 pixels */
+    background-color: #f0f0f0; /* Cor de fundo do rodapé */
+    margin-top: 40px; /* Adiciona uma margem superior de 40 pixels */
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; } /* Define o estado inicial da animação com opacidade 0 */
+    to { opacity: 1; } /* Define o estado final da animação com opacidade 1 */
+}
+
+.animated-title {
+    animation: fadeIn 1s ease-in-out; /* Aplica a animação fadeIn ao título durante 1 segundo com efeito ease-in-out */
+}
+
+.animated-button {
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para a propriedade de transformação */
+}
+
+.animated-button:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente a escala do botão ao passar o mouse */
+}
+
+.animated-section {
+    animation: fadeIn 1.5s ease-in-out; /* Aplica a animação fadeIn à seção durante 1.5 segundos com efeito ease-in-out */
+}
+
+.fixed-nav {
+    animation: slideInDown 0.5s ease-out; /* Aplica a animação slideInDown à navbar durante 0.5 segundos com efeito ease-out */
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-100%); opacity: 0; } /* Inicia a animação com a navbar 100% acima e opacidade 0 */
+    to { transform: translateY(0); opacity: 1; } /* Finaliza a animação com a navbar na sua posição original e opacidade 1 */
+}
+
+.quemsomos{
+    padding-left: 60%;
+}
