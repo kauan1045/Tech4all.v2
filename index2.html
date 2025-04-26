@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tech4All</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para a página de login */
+        .login-container {
+            position: relative; /* Para posicionar a login-box sobre o vídeo */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Ocupa toda a altura da tela */
+            padding: 20px;
+            box-sizing: border-box; /* Garante que o padding não afete a altura total */
+        }
+        body {
+            padding: 0%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Cor de fundo padrão */
+        }
+
+        .login-box {
+            background-color: rgba(240, 240, 240, 0.8); /* Fundo semi-transparente */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra um pouco mais forte */
+            width: 400px;
+            max-width: 90%;
+            text-align: center;
+            z-index: 10; /* Garante que a caixa de login fique acima do vídeo */
+        }
+
+        .login-box h2 {
+            color: blue;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .login-button {
+            background-color: #0000ff; /* Cor azul principal */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-button:hover {
+            background-color: #0000cc;
+        }
+
+        .signup-link {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .signup-link a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        .background-video {
+            padding: 0;
+            margin: 0;
+            padding-right: 0%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1; /* Coloca o vídeo atrás do conteúdo */
+        }
+    </style>
+</head>
+<body>
+    <nav class="fixed-nav">
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                    </ul>
+            </nav>
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <video autoplay loop muted class="background-video">
+            <source src="img/4116381-uhd_3840_2160_25fps.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-button" onclick="window.location.href='index4.html'">Entrar</button>
+            </form>
+            <div class="signup-link">
+                Não tem uma conta? <a href="#">Cadastre-se</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  
+</body>
+</html>
